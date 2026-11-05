@@ -21,9 +21,9 @@ export default function Home() {
     <>
       <a className="skip-link" href="#story">Skip to the story</a>
       <header className="site-header wrap">
-        <a className="wordmark" href="#top" aria-label="Three Stories, One Family — home"><span className="monogram">S<span>·</span></span><span>THREE STORIES<span className="wordmark-sub">ONE FAMILY</span></span></a>
-        <nav className="header-nav" aria-label="Main navigation"><a href="#story">The story</a><a href="#christy">Remembering Christy</a><a className="text-link" href="/three-stories-one-family.pdf" download>Read the original <span aria-hidden="true">↗</span></a></nav>
-        <details className="mobile-menu"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation">{chapters.map(c => <a key={c.id} href={`#${c.id}`}>{c.name}</a>)}<a href="/three-stories-one-family.pdf" download>Read the original PDF ↗</a></nav></details>
+        <a className="wordmark" href="#top" aria-label="Three Stories, One Family — home"><svg className="family-mark" viewBox="0 0 56 56" fill="none" aria-hidden="true"><path d="M28 46C9 37 5 17 14 13C24 9 30 28 28 46Z" /><path d="M28 46C47 37 51 17 42 13C32 9 26 28 28 46Z" /><path d="M28 46C12 27 19 6 28 6C37 6 44 27 28 46Z" /><path d="M28 46V51" /></svg><span className="wordmark-name">Three Stories,<span className="wordmark-sub">One Family</span></span></a>
+        <nav className="header-nav" aria-label="Main navigation"><a href="#story">The story</a><a href="#christy">Remembering Christy</a><a className="text-link" href="/three-stories-one-family.pdf" download>Download the brochure <span aria-hidden="true">↓</span></a></nav>
+        <details className="mobile-menu"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation">{chapters.map(c => <a key={c.id} href={`#${c.id}`}>{c.name}</a>)}<a href="/three-stories-one-family.pdf" download>Download the brochure ↓</a></nav></details>
       </header>
       <main id="top">
         <section className="hero wrap" aria-labelledby="hero-title">
@@ -32,7 +32,7 @@ export default function Home() {
         </section>
         <section className="introduction" id="story"><div className="intro-inner wrap"><span className="intro-mark" aria-hidden="true">“</span><div><p>{story[0][3]}</p><p>{story[0][4]}</p></div><a href="#eileen" className="circle-link" aria-label="Continue to Eileen’s story">↓</a></div></section>
         <div className="story-layout wrap">
-          <aside className="story-sidebar"><nav aria-label="Story chapters"><span className="eyebrow">THEIR STORIES</span>{chapters.map(chapter => <a key={chapter.id} href={`#${chapter.id}`}><span>{chapter.number}</span>{chapter.name}<span className="nav-arrow" aria-hidden="true">↗</span></a>)}<a className="pdf-link" href="/three-stories-one-family.pdf" download>Original document <span>PDF · 21 pages ↗</span></a></nav><p className="sidebar-note">“Their stories will not be silenced. Their lives will not be forgotten.”</p></aside>
+          <aside className="story-sidebar"><nav aria-label="Story chapters"><span className="eyebrow">THEIR STORIES</span>{chapters.map(chapter => <a key={chapter.id} href={`#${chapter.id}`}><span>{chapter.number}</span>{chapter.name}<span className="nav-arrow" aria-hidden="true">↗</span></a>)}<a className="pdf-link" href="/three-stories-one-family.pdf" download>Download the brochure <span>Brochure · 21 pages ↓</span></a></nav><p className="sidebar-note">“Their stories will not be silenced. Their lives will not be forgotten.”</p></aside>
           <article className="story-article">
             <section className="chapter" id="eileen"><ChapterLabel number="01">EILEEN’S STORY</ChapterLabel><h2>Eileen Smith<br /><em>The Unknown Story</em></h2><Paragraphs page={2} end={6} /><div className="archive-feature"><Photo index={1} /><p>{story[1].slice(6).join(" ")}</p></div></section>
             <section className="chapter" id="mary"><ChapterLabel number="02">MARY’S STORY</ChapterLabel><h2>{story[2][0]}</h2><Paragraphs page={3} end={4} /><div className="portrait-small"><Photo index={2} caption={story[2][4]} /></div>
@@ -52,7 +52,7 @@ export default function Home() {
           </article>
         </div>
         <section className="memorial" aria-labelledby="memorial-title"><div className="memorial-inner wrap"><div className="memorial-portrait"><Photo index={24} /></div><div className="memorial-copy"><div className="eyebrow">{story[19][0]}</div><h2 id="memorial-title">Christy Smith</h2><p className="lifespan">{story[19][7]}</p><blockquote>{story[19].slice(1,5).join(" ")}</blockquote><p className="quote-credit">— CHRISTOPHER (CHRISTY) SMITH<br />15 FEBRUARY 2007</p></div></div></section>
-        <section className="closing wrap"><div className="closing-photo"><Photo index={25} caption={story[20][1]} /></div><div><div className="eyebrow">IN LOVING MEMORY</div><h2>In Loving Memory</h2><blockquote>{story[20][2]}</blockquote><p className="presented">{story[20][3]}</p><a className="text-link" href="/three-stories-one-family.pdf" download>Read the original document <span aria-hidden="true">↗</span></a></div></section>
+        <section className="closing wrap"><div className="closing-photo"><Photo index={25} caption={story[20][1]} /></div><div><div className="eyebrow">IN LOVING MEMORY</div><h2>In Loving Memory</h2><blockquote>{story[20][2]}</blockquote><p className="presented">{story[20][3]}</p><a className="text-link" href="/three-stories-one-family.pdf" download>Download the brochure <span aria-hidden="true">↓</span></a></div></section>
       </main>
       <footer className="site-footer wrap"><a className="footer-title" href="#top">Three Stories, One Family</a><span>Presented by Mary Smith</span><a href="#top">Back to top ↑</a></footer>
     </>
