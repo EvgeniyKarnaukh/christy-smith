@@ -1,7 +1,13 @@
 import type { NextConfig } from "next";
+import { absoluteUrl } from "./lib/site";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async headers() {
+    return [{
+      source: "/three-stories-one-family.pdf",
+      headers: [{ key: "Link", value: `<${absoluteUrl("/")}>; rel="canonical"` }],
+    }];
+  },
   experimental: {
     agentFeedback: true,
   },

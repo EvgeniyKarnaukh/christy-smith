@@ -1,4 +1,5 @@
 import Photo from "./photo";
+import StructuredData from "./structured-data";
 import story from "./data/story.json";
 
 const chapters = [
@@ -19,6 +20,7 @@ function ChapterLabel({ number, children }: { number: string; children: React.Re
 export default function Home() {
   return (
     <>
+      <StructuredData />
       <a className="skip-link" href="#story">Skip to the story</a>
       <header className="site-header wrap">
         <a className="wordmark" href="#top" aria-label="Three Stories, One Family — home"><svg className="family-mark" viewBox="0 0 56 56" fill="none" aria-hidden="true"><path d="M28 46C9 37 5 17 14 13C24 9 30 28 28 46Z" /><path d="M28 46C47 37 51 17 42 13C32 9 26 28 28 46Z" /><path d="M28 46C12 27 19 6 28 6C37 6 44 27 28 46Z" /><path d="M28 46V51" /></svg><span className="wordmark-name">Three Stories,<span className="wordmark-sub">One Family</span></span></a>
