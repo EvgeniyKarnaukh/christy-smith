@@ -461,11 +461,6 @@ h1 em {
   padding-left: 25px;
   border-left: 2px solid var(--wine);
 }
-.memory-detail {
-  max-width: 340px;
-  margin-left: auto;
-  margin-top: 25px;
-}
 .memorial {
   background: #532535;
   color: #f7f1e8;
@@ -897,9 +892,6 @@ h1 em {
   .photo-dialog>img {
     max-width: 85vw;
   }
-  .memory-detail {
-    max-width: 240px;
-  }
 }
 @media(prefers-reduced-motion:reduce) {
   html {
@@ -911,7 +903,7 @@ h1 em {
   }
 }
 @media print {
-  .site-header,.story-sidebar,.button,.hero-footnote,.site-footer,.photo-expand,.text-link,.circle-link,.memory-detail {
+  .site-header,.story-sidebar,.button,.hero-footnote,.site-footer,.photo-expand,.text-link,.circle-link {
     display: none!important;
   }
   .wrap {

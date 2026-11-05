@@ -6,7 +6,7 @@ The canonical origin is `https://christy-smith-rust.vercel.app`. To move the sit
 
 - Page title, description, author, language and canonical link.
 - Open Graph cover at `app/opengraph-image.jpg`, 1200 × 630, with descriptive alt text. Twitter uses the same image with a large summary card.
-- `robots.txt` pointing to `sitemap.xml`; the sitemap lists the home page and its 26 original photographs.
+- `robots.txt` pointing to `sitemap.xml`; the sitemap lists the home page and its 25 displayed photographs.
 - JSON-LD for the website, page, family-history article, Mary Smith and the downloadable brochure. Dates and organizations are omitted where the supplied material does not establish them.
 - A canonical HTTP Link header on the brochure, pointing to the equivalent HTML story.
 - Existing SVG/favicon branding and a 180 × 180 Apple touch icon.
